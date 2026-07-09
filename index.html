@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ชุดเกมฝึกคลิกเมาส์ ป.1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="header">
+      <h1>🖱️ ชุดเกมฝึกคลิกเมาส์ ป.1</h1>
+      <p>เลือกเกม แล้วฝึกเลื่อนเมาส์ คลิกซ้าย และสังเกตภาพ</p>
+    </section>
+
+    <section id="menu" class="menu">
+      <button onclick="selectGame('balloon')">🎈 คลิกลูกโป่ง</button>
+      <button onclick="selectGame('star')">⭐ จับดาว</button>
+      <button onclick="selectGame('fish')">🐟 จับปลา</button>
+      <button onclick="selectGame('cheese')">🧀 เก็บชีสให้หนู</button>
+      <button onclick="selectGame('traffic')">🚦 ไฟเขียวไฟแดง</button>
+    </section>
+
+    <section class="panel">
+      <div class="topbar">
+        <div id="gameTitle">เลือกเกมเพื่อเริ่มเล่น</div>
+        <div>คะแนน: <span id="score">0</span></div>
+        <div>เวลา: <span id="time">30</span></div>
+      </div>
+
+      <div class="buttons">
+        <button class="start" onclick="startGame()">เริ่มเล่น</button>
+        <button class="back" onclick="backToMenu()">กลับเมนู</button>
+      </div>
+
+      <div id="instruction" class="instruction">กดเลือกเกมด้านบนก่อนค่ะ</div>
+      <div id="gameArea" class="game-area"></div>
+      <div id="message" class="message"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
